@@ -13,7 +13,8 @@ class Quiz extends Model
     public $timestamp = false;
 
     public function preguntas(){
-        return $this->BelongsToMany(Pregunta::class, );
+        return $this->BelongsToMany(Pregunta::class,'' );
+
     }
 
 
