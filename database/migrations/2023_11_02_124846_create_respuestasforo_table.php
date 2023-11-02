@@ -21,7 +21,7 @@ class CreateRespuestasforoTable extends Migration
             $table->string('Hora de publicacion');
         });
     }
-
+//La vida es dura mi hermano 
     /**
      * Reverse the migrations.
      *
