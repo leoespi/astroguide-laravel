@@ -19,6 +19,7 @@ class CreateLeccionesTable extends Migration
             $table->integer('Lecciones Diarias realizadas');
             $table->integer('Lecciones Totales realizadas');
             $table->text('Tipo de leccion');
+            $table->foreign('user_id')->references('id')->on('users');
 
             //$table->timestamps();
         });
