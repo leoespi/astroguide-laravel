@@ -23,7 +23,7 @@ class CreateForoTable extends Migration
 
         });
     }
-//La vida es dura mi hermano 
+//La vida es dura mi hermano
 
     /**
      * Reverse the migrations.

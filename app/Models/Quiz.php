@@ -5,17 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Quiz extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['quiz'];
-    public $timestamp = false;
+    protected $table = "quizs";
 
-    public function preguntas(){
-        return $this->BelongsToMany(Pregunta::class,'' );
+    protected $fillable = [
+        "Titulo",
+        "Duracion",
+        "Pregunta",
+        "Respuesta1",
+        "Respuesta2",
+        "Respuesta3",
+        "Respuesta4",
+    ];
 
-    }
-
-
+    public $timestamps = false;
 }
