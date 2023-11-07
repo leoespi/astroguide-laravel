@@ -15,10 +15,11 @@ class CreateLeccionesTable extends Migration
     {
         Schema::create('lecciones', function (Blueprint $table) {
             $table->id();
-            $table->text('Nombre de la leccion');
-            $table->integer('Lecciones Diarias realizadas');
-            $table->integer('Lecciones Totales realizadas');
-            $table->text('Tipo de leccion');
+            $table->text('Nombre_de_la_leccion');
+            $table->integer('Lecciones_Diarias_realizadas');
+            $table->integer('Lecciones_Totales_realizadas');
+            $table->text('Tipo_de_leccion');
+            $table->foreignId('user_id');
             $table->foreign('user_id')->references('id')->on('users');
 
             //$table->timestamps();
