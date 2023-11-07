@@ -3,6 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\QuizApiController;
+use App\Http\Controllers\API\ForoApiController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +23,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('quiz', QuizApiController::class);
+Route::apiResource('foro', ForoApiController::class);
 

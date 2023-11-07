@@ -17,7 +17,8 @@ class CreateLogrosTable extends Migration
             $table->id();
             $table->text('Nombre del Logro');
             $table->text('Rareza');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->bigInteger('users_id')->unsigned();
+            $table->foreign('users_id')->references('id')->on('users');
             //$table->timestamps();
         });
     }
