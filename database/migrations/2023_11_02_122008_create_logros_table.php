@@ -15,8 +15,9 @@ class CreateLogrosTable extends Migration
     {
         Schema::create('logros', function (Blueprint $table) {
             $table->id();
-            $table->text('Nombre del Logro');
+            $table->text('Nombre_del_Logro');
             $table->text('Rareza');
+            $table->foreignId('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             //$table->timestamps();
         });
