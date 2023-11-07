@@ -5,7 +5,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\QuizApiController;
 use App\Http\Controllers\API\ForoApiController;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9d30b7ed793eb98975170dee26756392c7b4e7cf
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +26,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('quiz', QuizApiController::class);
+Route::apiResource('foro', ForoApiController::class);
+
 Route::apiResource('foro', ForoApiController::class);
 

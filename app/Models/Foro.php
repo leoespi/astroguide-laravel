@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Foro extends Model
 {
+    public $timestamps = false;
     use HasFactory;
-    protected $table = 'foro';
+    protected $table = 'foros';
 
     public function users(){
         return $this->belongsTo(User::class, 'user_id', 'id');
