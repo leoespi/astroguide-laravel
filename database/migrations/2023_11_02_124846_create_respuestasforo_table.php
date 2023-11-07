@@ -18,7 +18,7 @@ class CreateRespuestasforoTable extends Migration
             $table->string('Usuario');
             $table->text('Comentarios');
             $table->string('Fecha');
-            $table->string('Hora de publicacion');
+            $table->string('Hora_de_publicacion');
         });
     }
 //La vida es dura mi hermano 
