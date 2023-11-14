@@ -13,7 +13,7 @@ class ForoApiController extends Controller
     public function index()
     {
         $foros = Foro::with('usuario') 
-                      ->orderBy('fecha_publicacion', 'desc')
+                      ->orderBy('fecha', 'desc')
                       ->orderBy('hora_publicacion', 'desc')
                       ->get();
 
@@ -37,7 +37,7 @@ class ForoApiController extends Controller
         $foros = Foro::create([
             'comentarios' => $request->comentarios,
             'codigo_publicacion' => $request->codigo_publicacion,
-            'fecha_publicacion' => $request->fecha_publicacion,
+            'fecha' => $request->fecha_publicacion,
             'hora_publicacion' => $request->hora_publicacion,
             'user_id' => $request->user_id
         ]);
@@ -67,7 +67,7 @@ class ForoApiController extends Controller
         $validator = Validator::make($request->all(), [
             'comentarios' => 'required',
             'codigo_publicacion' => 'required',
-            'fecha_publicacion' => 'required|date',
+            'fecha' => 'required|date',
             'hora_publicacion' => 'required|date_format:H:i',
             'user_id' => 'required|exists:users,id'
         ]);
