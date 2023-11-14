@@ -7,6 +7,7 @@ use App\Http\Controllers\API\ForoApiController;
 use App\Http\Controllers\API\LeccionesApiController;
 use App\Http\Controllers\API\UserApiController;
 use App\Http\Controllers\API\RolApiController;
+use App\Http\Controllers\API\LogroApiController;
 
 
 
