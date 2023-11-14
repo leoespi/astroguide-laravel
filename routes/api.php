@@ -15,6 +15,7 @@ use App\Http\Controllers\API\RespuestasApiController;
 
 
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -33,8 +34,24 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::apiResource('quiz', QuizApiController::class);
 Route::apiResource('foro', ForoApiController::class);
 Route::apiResource('lecciones', LeccionesApiController::class);
-Route::apiResource('user', UsersApiController::class);
+Route::apiResource('user', UserApiController::class);
 Route::apiResource('rol', RolApiController::class);
 Route::apiResource('respuestas', RespuestasApiController::class);
 Route::get('api/respuestas-foro/{foroId}', [RespuestasApiController::class,'hola']);
 
+
+
+Route::group([
+    'prefix' => 'auth',
+    'namespace' => 'App\Http\Controllers',
+], function () {
+    Route::post('login', 'AuthController@login');
+    Route::post('signup', 'AuthController@signUp');
+  
+    Route::group([
+      'middleware' => 'auth:api'
+    ], function() {
+        Route::get('logout', 'AuthController@logout');
+        Route::get('user', 'AuthController@user');
+    });
+});
