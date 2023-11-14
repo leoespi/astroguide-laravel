@@ -7,6 +7,8 @@ use App\Http\Controllers\API\ForoApiController;
 use App\Http\Controllers\API\LeccionesApiController;
 use App\Http\Controllers\API\UserApiController;
 use App\Http\Controllers\API\RolApiController;
+use App\Http\Controllers\API\RespuestasApiController;
+
 
 
 
@@ -33,4 +35,6 @@ Route::apiResource('foro', ForoApiController::class);
 Route::apiResource('lecciones', LeccionesApiController::class);
 Route::apiResource('user', UsersApiController::class);
 Route::apiResource('rol', RolApiController::class);
+Route::apiResource('respuestas', RespuestasApiController::class);
+Route::get('api/respuestas-foro/{foroId}', [RespuestasApiController::class,'hola']);
 

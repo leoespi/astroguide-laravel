@@ -8,9 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class Respuestas extends Model
 {
     use HasFactory;
-    protected $table = 'respuestas';
-
-    public function comentarios(){
-        return $this->BelongsToMany(foro::class, );
-    }
 }

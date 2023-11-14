@@ -16,6 +16,6 @@ class Foro extends Model
     }
 
     public function comentarios(){
-        return $this->BelongsToMany(respuestasforo::class, );
+        return $this->BelongsToMany(respuestas::class, );
     }
 }
