@@ -4,7 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Model\Rol;
+use App\Models\Rol;
 
 
 class RolApiController extends Controller

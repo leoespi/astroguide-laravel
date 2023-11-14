@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\QuizApiController;
 use App\Http\Controllers\API\ForoApiController;
 use App\Http\Controllers\API\LeccionesApiController;
-use App\Http\Controllers\API\UsersApiController;
+use App\Http\Controllers\API\UserApiController;
 use App\Http\Controllers\API\RolApiController;
 
 
@@ -32,5 +32,5 @@ Route::apiResource('quiz', QuizApiController::class);
 Route::apiResource('foro', ForoApiController::class);
 Route::apiResource('lecciones', LeccionesApiController::class);
 Route::apiResource('user', UsersApiController::class);
-Route::apiResource('users', UsersApiController::class);
+Route::apiResource('rol', RolApiController::class);
 
