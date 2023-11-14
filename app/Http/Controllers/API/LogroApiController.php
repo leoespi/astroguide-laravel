@@ -36,7 +36,10 @@ class LogroApiController extends Controller
         $logros = new Logros();
         $logros->Nombre_del_Logro = $request->Nombre_del_Logro;
         $logros->Rareza = $request->Rareza;
+
         $logros->users_id = $request->users_id;
+
+
         $logros->save();
         return response()->json($logros, 200);
     }
@@ -87,4 +90,6 @@ class LogroApiController extends Controller
         //
     }
 }
+
 //A
+

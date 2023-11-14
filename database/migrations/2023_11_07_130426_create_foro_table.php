@@ -15,11 +15,12 @@ class CreateForoTable extends Migration
     {
         Schema::create('foro', function (Blueprint $table) {
             $table->id();
-            $table->string('Usuario');
+            $table->biginteger('users_id')->unsigned();
+            $table->foreign('users_id')->references('id')->on('users');
             $table->text('Comentarios');
-            $table->string('Codigo de publicacion');
-            $table->string('Fecha');
-            $table->string('Hora de publicacion');
+            $table->string('Codigo_publicacion');
+            $table->date('Fecha');
+            $table->time('Hora_publicacion');
 
         });
     }
@@ -35,3 +36,5 @@ class CreateForoTable extends Migration
         Schema::dropIfExists('foro');
     }
 }
+
+
