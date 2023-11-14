@@ -13,12 +13,12 @@ class CreateRespuestasforoTable extends Migration
      */
     public function up()
     {
-        Schema::create('respuestasforo', function (Blueprint $table) {
+        Schema::create('respuestas', function (Blueprint $table) {
             $table->id();
             $table->string('Usuario');
             $table->text('Comentarios');
             $table->string('Fecha');
-            $table->string('Hora_de_publicacion');
+            $table->string('Contenido');
         });
     }
 //La vida es dura mi hermano 
@@ -29,6 +29,6 @@ class CreateRespuestasforoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('respuestasforo');
+        Schema::dropIfExists('respuestas');
     }
 }
